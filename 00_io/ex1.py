@@ -7,7 +7,7 @@ print(a, type(a), sep=",")
 
 # 정수 변환
 a = input()
-int(a)
+# int(a)
 print(a, type(a))
 
 a = int(input())
