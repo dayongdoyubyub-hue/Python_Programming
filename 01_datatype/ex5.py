@@ -36,8 +36,8 @@ s = "Python is fun. I love Python."
 print(s.find("Python"))  # 인덱스 반환
 print(s.index("Python"))  # 인덱스 반환
 
-print(s.find("Java"))  # 인덱스 반환 ( 없으면 )
-# print(s.index("Java"))            # 인덱스 반환 ( 없으면 )
+print(s.find("Java"))  # 인덱스 반환 ( 없으면 -1)
+# print(s.index("Java"))            # 인덱스 반환 ( 없으면 에러 )
 
 # # 부분 문자열이 몇 번 나오는지 알려주는 문자열 메소드
 print(s.count("o"))  # 등장 횟수
