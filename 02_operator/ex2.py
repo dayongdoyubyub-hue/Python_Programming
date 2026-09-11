@@ -22,5 +22,3 @@ print("짝수" if a % 2 == 0 else "홀수")
 
 score = 85
 print("A" if score >= 90 else "B" if score >= 80 else "C" if score >= 70 else "D")
-
-##냠
