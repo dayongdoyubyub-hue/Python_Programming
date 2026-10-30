@@ -5,7 +5,7 @@ a = "python"  # 큰 따옴표 권장
 print(a, type(a))
 
 print("I'll be back")
-# print('I\'ll be back') -> 그냥 저장하면'' -> ""로 수정돼서,.,.. 주석처리합니다
+# print('I\'ll be back') #->  그냥 저장하면'' -> ""로 수정돼서,.,.. 주석처리합니다
 
 # 여러줄 문자열
 a = """

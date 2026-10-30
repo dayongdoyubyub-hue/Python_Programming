@@ -49,7 +49,7 @@ print(f"실행 시간: {end - start:.6f}초")
 my_list = []
 
 start = time.time()
-for i in range(100000):
+for i in range(10):
     my_list.append(str(i))  # 동일 리스트 객체에 append
 
 s = "".join(my_list)
