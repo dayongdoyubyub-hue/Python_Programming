@@ -16,6 +16,7 @@ print(3 in [1, 2, 3])
 # int max = a > b ? a : b;
 a, b = 2, 3
 max_num = a if a > b else b
+print(max_num)
 
 # a값이 짝수면 "짝수", 홀수면 "홀수" 출력
 print("짝수" if a % 2 == 0 else "홀수")
