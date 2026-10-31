@@ -12,8 +12,8 @@ print(a % b)  # 나머지
 print(a // b)  # 몫
 print(a**b)  # 거듭제곱
 
-# 10 / 3 = 3
-# int / int = int
+# 10 // 3 = 3
+# int // int = int
 print(10 / 2)
 
 # 복합 대입 연산자
