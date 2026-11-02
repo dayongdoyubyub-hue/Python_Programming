@@ -25,7 +25,7 @@ import webbrowser
 def get_dog_image():
     try:
         url = "https://dog.ceo/api/breeds/image/random"
-        response = request.get(url, timeout=10)
+        response = requests.get(url, timeout=10)
 
         if response.status_code != 200:
             print(f"요청 실패 (상태 코드: {response.status_code})")
@@ -56,7 +56,7 @@ def get_dog_image():
 def get_cat_image():
     try:
         url = "https://api.thecatapi.com/v1/images/search"
-        response = request.get(url, timeout=10)
+        response = requests.get(url, timeout=10)
 
         if response.status_code != 200:
             print(f"요청 실패 (상태 코드: {response.status_code})")
@@ -66,7 +66,6 @@ def get_cat_image():
         print(data)
         webbrowser.open(data[0]["url"])
 
-        webbrowser.open(data["message"])
     except requests.exceptions.Timeout as e:
         print(f"서버 응답시간 초과: {e}")
     except requests.exceptions.RequestException as e:
@@ -99,6 +98,9 @@ def get_univ_list(country="Korea, Republic of"):
         print(data)
 
         # 대학 수: 개
+        print(f"대학 수: {len(data)}개")
+        for univ in data[:5]:  # 앞 5개만
+            print(f"{univ['name']} ({univ['web_pages'][0]})")
         # 앞의 5개만 출력: 대학명 (웹사이트 주소)
 
     except requests.exceptions.Timeout as e:
@@ -125,7 +127,7 @@ def get_weather(lat, lon):
         params = {
             "latitude": lat,
             "longitude": lon,
-            "current": "temperature_2m",
+            "current": "temperature_2m,wind_speed_10m",
         }
         response = requests.get(url, params=params, timeout=10)
 
